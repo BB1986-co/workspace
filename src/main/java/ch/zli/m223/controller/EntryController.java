@@ -16,6 +16,8 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
+
+import ch.zli.m223.dto.DtoEntity;
 import ch.zli.m223.model.Entry;
 import ch.zli.m223.service.EntryService;
 
@@ -25,6 +27,9 @@ public class EntryController {
 
     @Inject
     EntryService entryService;
+
+    @Inject
+    DtoEntity dtoEntity;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
